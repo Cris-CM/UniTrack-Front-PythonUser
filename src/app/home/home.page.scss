@@ -1,121 +1,159 @@
 .background-container {
-  --background: url('../../assets/background_main_screen.svg') no-repeat center center / cover;
+  --background: url("../../assets/background_main_screen.svg") no-repeat center
+    center / cover;
 }
 
-ion-content{
-    --background: #F1F1F1;
+ion-content {
+  --background: #f1f1f1;
 }
 
-ion-list{
-    background: transparent;
+ion-list {
+  background: transparent;
 }
 
-.nombre{
-    --background: transparent;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 5px;
+.nombre {
+  --background: transparent;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
-.ionit{
-    --background: transparent;
-    margin-top: 20px;
+.ionit {
+  --background: transparent;
+  padding: 20px;
 }
 
-.ioniit{
-    --background: transparent;
+.ioniit {
+  --background: transparent;
 }
 
 .header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-    background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  background-color: transparent;
 }
-.tit{
-    color: #073A8D;
-    font-size: 50px;
-    text-transform: none;
-    font-family: "Inter", sans-serif;
-    font-weight: 900;
-    margin-right: 0px;
-    display: flex;
-    margin-top: 0px;
-    text-align: left;
-}
-
-.sub-tit{
-    color: #073A8D;
-    font-size: 20px;
-    text-transform: none;
-    font-family: "Inter", sans-serif;
-    font-weight: 900;
-    margin-right: 0px;
-    display: flex;
-    text-align: left;
+.tit {
+  color: #073a8d;
+  font-size: 50px;
+  text-transform: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  margin-right: 0px;
+  display: flex;
+  margin-top: 0px;
+  text-align: left;
 }
 
+.sub-tit {
+  color: #073a8d;
+  font-size: 20px;
+  text-transform: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  margin-right: 0px;
+  display: flex;
+  text-align: left;
+}
 
 .text {
-  display: flex; 
+  display: flex;
   justify-content: center;
-  align-items: center;    
-  color: #7e7c7c;
-  font-family: 'Inter', sans-serif;
+  align-items: center;
+  color: #6c6c6c;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  margin: 0px 10px 30px 10px;
+  margin: 0px 10px 0px 10px;
   text-align: center;
 }
 
+.imgper {
+  position: relative;
+  cursor: pointer;
+  width: 220px;
+  height: 220px;
+  margin: auto;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  background-color: #e8e8e8;
+  z-index: 0;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.171);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 
-.imgper{
-    width: 120px;
-    height: 120px;
-    margin: auto;
-    margin-bottom: 5px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-    background-color: rgb(200, 200, 200);
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 18px 8px rgba(0, 0, 0, 0.08);
+  }
 
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #ffffff 30%, #939393 85%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+  }
+
+  .qr-ejemplo {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    object-fit: contain;
+    opacity: 0.6;
+  }
 }
-.imgper .foto{
-    align-items: center;
-    font-size: 40px;
-    text-align: center;
-    margin-top: 70px;
-    color: aliceblue;
+
+.imgper .foto {
+  align-items: center;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 70px;
+  color: aliceblue;
 }
 
-.nom{
-    color: rgb(17, 17, 17);
-    font-family: 'Inter', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
+.nom {
+  color: rgb(17, 17, 17);
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .btn-qr-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn-qr{
-    --box-shadow: none;
-    --background: #DD2324;
-    color: rgb(255, 255, 255);
-    font-weight: 800;
-    font-size: 20px;
-    --border-radius: 20px;
-    height: 50px;
-    width: 70%;
-    margin: auto;
-    text-transform: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    transform: scale(1); 
+.btn-qr {
+  --box-shadow: none;
+  --background: #ae1717;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 20px;
+  --border-radius: 20px;
+  height: 50px;
+  width: 70%;
+  margin: auto;
+  text-transform: none;
+  transition: transform 0.35s ease-in-out, color 0.35s ease-in-out,
+    background 0.35s ease-in-out;
+  transform: scale(1);
+}
+
+.btn-qr:hover {
+  transform: scale(1.02);
 }
 
 .select-item-container {
@@ -123,20 +161,19 @@ ion-list{
   justify-content: space-between;
   align-items: center;
   margin: 16px auto;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 40px 10px 40px;
   height: 50px;
   width: 70%;
-  background-color: white; 
+  background-color: white;
   border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .toggle-label {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bold;
   color: #151515;
-  font-family: 'Inter', sans-serif;
-
+  font-family: "Inter", sans-serif;
 }
 
 ///FOOTER
@@ -163,7 +200,7 @@ ion-list{
   }
 }
 
-.btnex{
+.btnex {
   --box-shadow: none;
   margin: auto;
   width: 90px;
@@ -180,12 +217,11 @@ ion-row {
   margin-top: 20px;
   gap: 0px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
-  color:#073A8D ;
-
+  color: #073a8d;
 }
 
 ion-row:nth-child(even) {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 ion-row {
@@ -197,11 +233,11 @@ ion-col {
   text-align: center;
 }
 
-ion-item-background{
-background-color: #ae1717;
-}   
+ion-item-background {
+  background-color: #ae1717;
+}
 
-.table-container{
+.table-container {
   padding: 0;
 }
 
@@ -209,14 +245,14 @@ ion-footer ion-toolbar {
   position: fixed;
   bottom: 0;
   width: 100%;
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 ion-footer ion-toolbar ion-grid {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 0px; 
+  padding: 8px 0px;
   margin: 0px;
 }
 
